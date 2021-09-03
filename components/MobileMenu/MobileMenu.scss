@@ -1,0 +1,87 @@
+.mobile-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 224px;
+  color: #fff;
+  background-color: var(--color-brand-dark);
+
+  &__close {
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    background-color: transparent;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    @include tablet {
+      right: 32px;
+      top: 24px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__nav {
+    overflow-y: auto;
+    padding: 80px 14px 40px 40px;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+
+    .navitem + .navitem {
+      margin-top: 16px;
+
+      @include tablet {
+        margin-top: 32px;
+      }
+    }
+
+    .navitem__link,
+    .navitem__dropdown-toggle {
+      &:hover,
+      &:focus {
+        color: inherit;
+      }
+    }
+
+    .navitem__nested-list {
+      margin-top: 12px;
+
+      .navitem + .navitem {
+        margin-top: 12px;
+
+        @include tablet {
+          margin-top: 16px;
+        }
+      }
+
+      @include tablet {
+        margin-top: 16px;
+      }
+    }
+
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
+  @include tablet {
+    width: 400px;
+  }
+
+  @include tablet-xl {
+    display: none;
+  }
+}

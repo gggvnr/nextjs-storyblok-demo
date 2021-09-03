@@ -1,0 +1,122 @@
+:root {
+  --color-brand-dark: #282c34;
+  --color-brand-light: #002c8a;
+  --color-accent-icon: var(--color-brand-light);
+  --color-accent-text: var(--color-brand-light);
+  --gradient-accent-text: linear-gradient(123deg, #002c8a 0%, #0253ff 100%);
+  --color-accent-container: #407af5;
+  --gradient-accent-container: linear-gradient(100deg, #407af5 0%, #396fe3 100%);
+  --color-accent-label: #00c514;
+  --color-heading: #001440;
+  --color-subheading: #212c43;
+  --color-body-text: #687288;
+  --color-details: #b0bad0;
+  --color-stroke: #e7e8ea;
+  --color-linkedin: #2967bc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: var(--color-brand-dark);
+}
+
+body {
+  overflow-x: hidden;
+
+  .is-mobile-menu-opened & {
+    overflow: hidden;
+  }
+}
+
+.page {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+}
+
+.section {
+  margin: 96px 0;
+
+  &--colored {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    color: #fff;
+    background-image: var(--gradient-accent-container);
+
+    .section-heading {
+      color: #fff;
+    }
+
+    .point-list {
+      color: #fff;
+    }
+  }
+
+  &--hero {
+    margin-bottom: 0;
+    margin-bottom: -96px;
+    padding-bottom: 96px;
+
+    .textbox {
+      margin: 96px auto;
+      max-width: 560px;
+    }
+  }
+}
+
+.container {
+  margin: 72px auto;
+  padding: 0 24px;
+  max-width: 1218px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.with-edges {
+  @include tablet-xl {
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      border-radius: 25px;
+      width: 100px;
+      height: 80%;
+      max-height: 572px;
+      background-color: var(--color-brand-light);
+      transform: translate3d(0, -50%, 0);
+    }
+
+    &::before {
+      right: calc(100% - 14px);
+    }
+
+    &::after {
+      left: calc(100% - 14px);
+    }
+  }
+}

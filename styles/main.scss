@@ -1,0 +1,11 @@
+@import "media.scss";
+@import "grid.scss";
+@import "globals.scss";
+
+// common
+@import "../components/Nav/Nav";
+@import "../components/LangSwitch/LangSwitch";
+
+// layout
+@import "../components/Header/Header";
+@import "../components/Footer/Footer";
