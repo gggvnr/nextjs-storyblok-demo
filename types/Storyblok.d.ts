@@ -3,4 +3,4 @@ type StoryblokComponent = {
   component: string,
   _editable?: string,
   body?: StoryblokComponent[],
-}
+};

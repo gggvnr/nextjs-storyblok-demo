@@ -12,7 +12,7 @@ type HeaderProps = {
   routes: any[],
   locale: string,
   locales: string[],
-}
+};
 
 export default function Header({
   routes,

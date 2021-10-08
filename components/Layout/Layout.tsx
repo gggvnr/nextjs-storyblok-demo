@@ -6,7 +6,7 @@ type LayoutProps = {
   locale: string,
   locales: string[],
   children: React.ReactNode,
-}
+};
 
 const Layout = ({
   routes,

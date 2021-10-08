@@ -7,4 +7,4 @@ type Route = {
   isFolder?: boolean,
   excludeFromHeader?: boolean,
   routes: Route[],
-}
+};

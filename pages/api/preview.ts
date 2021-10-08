@@ -1,5 +1,6 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
 
+// eslint-disable-next-line consistent-return
 export default async function preview(req: NextApiRequest, res: NextApiResponse) {
   const { slug = '' } = req.query;
 
@@ -21,7 +22,7 @@ export default async function preview(req: NextApiRequest, res: NextApiResponse)
   if (Array.isArray(cookies)) {
     res.setHeader(
       'Set-Cookie',
-      cookies.map((cookie: string) => cookie.replace('SameSite=Lax', 'SameSite=None;Secure'))
+      cookies.map((cookie: string) => cookie.replace('SameSite=Lax', 'SameSite=None;Secure')),
     );
   }
 

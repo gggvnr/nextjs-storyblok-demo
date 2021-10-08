@@ -9,7 +9,7 @@ type ColumnProps = {
     large: string,
     xlarge: string,
   },
-}
+};
 
 export default function Column({
   children,

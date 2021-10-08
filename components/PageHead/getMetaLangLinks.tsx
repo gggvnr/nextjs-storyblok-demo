@@ -20,7 +20,7 @@ export default function getMetaLangLinks(locale: string, locales: string[]) {
       <link rel="alternate" href={canonicalURL} hrefLang="x-default" />
 
       {locale !== defaultLocale && <link rel="alternate" hrefLang={defaultLocale} href={siteUrl + asPath} />}
-      {isDefaultPath && <link rel="alternate" hrefLang={defaultLocale} href={`${siteUrl }/${defaultLocale}${ asPath}`} />}
+      {isDefaultPath && <link rel="alternate" hrefLang={defaultLocale} href={`${siteUrl}/${defaultLocale}${asPath}`} />}
 
       {locales
         .filter((localeName) => localeName !== locale)
@@ -29,7 +29,7 @@ export default function getMetaLangLinks(locale: string, locales: string[]) {
             key={localeName}
             rel="alternate"
             hrefLang={localeName}
-            href={`${siteUrl }/${localeName}${ asPath}`}
+            href={`${siteUrl}/${localeName}${asPath}`}
           />
         ))}
     </>

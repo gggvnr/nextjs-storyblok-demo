@@ -10,7 +10,7 @@ type NavProps = {
   isAbsoluteDropdown?: boolean,
   dropdownToTop?: boolean,
   darkDropdown?: boolean,
-}
+};
 
 export default function Nav({
   className = '',

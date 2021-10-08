@@ -6,7 +6,7 @@ type MetaTag = {
   property?: string,
   itemProp?: string,
   content?: string,
-}
+};
 
 type SeoDataProps = {
   [key: string]: any,
@@ -15,16 +15,16 @@ type SeoDataProps = {
   structuredData?: JSON,
   keywords?: string,
   metaTags?: MetaTag[],
-}
+};
 
 type PageHeadProps = {
   seoData: SeoDataProps,
   locale: string,
   locales: string[],
-}
+};
 
 export default function PageHead({
-  seoData,
+  seoData = {},
   locale,
   locales,
 }: PageHeadProps) {

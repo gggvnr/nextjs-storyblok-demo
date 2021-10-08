@@ -5,11 +5,11 @@ import { componentFactory } from './componentFactory';
 type DynamicComponentProps = {
   story: StoryblokComponent,
   folderIndex: StoryblokComponent[],
-}
+};
 
 export default function DynamicComponent({
   story,
-  folderIndex
+  folderIndex,
 }: DynamicComponentProps) {
   return renderComponentTree(story.body, folderIndex);
 }
@@ -19,7 +19,7 @@ function renderComponentTree(rootBody: StoryblokComponent[] = [], folderIndex: S
     <>
       {
         rootBody.map((bodyItem: StoryblokComponent) => {
-        const ResultComponent = componentFactory(bodyItem);
+          const ResultComponent = componentFactory(bodyItem);
 
           return (
             <SbEditable key={bodyItem._uid} content={bodyItem} {...bodyItem}>
@@ -33,5 +33,5 @@ function renderComponentTree(rootBody: StoryblokComponent[] = [], folderIndex: S
         })
       }
     </>
-  )
+  );
 }

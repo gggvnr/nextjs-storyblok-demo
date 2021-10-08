@@ -1,6 +1,6 @@
 type GridProps = {
   children: React.ReactNode,
-}
+};
 
 export default function Grid({
   children,
@@ -11,5 +11,5 @@ export default function Grid({
         {children}
       </div>
     </div>
-  )
+  );
 }

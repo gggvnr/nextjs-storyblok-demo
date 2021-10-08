@@ -10,7 +10,7 @@ type NavItemProps = {
   isAbsoluteDropdown?: boolean,
   dropdownToTop?: boolean,
   darkDropdown?: boolean,
-}
+};
 
 export default function NavItem({
   className = '',
